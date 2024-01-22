@@ -34,7 +34,7 @@ ENV FRONTEND_PORT=9925
 # hadolint ignore=DL4006
 RUN grep -rl "/app/data" /app | xargs sed -i 's|/app/data|/config/addons_config/mealie_data|g' && \
     # Sets port to 9925 as default port
-    sed -i "s|yarn start -p 3000|yarn start -p 9925|g" /app/run.sh
+    sed -i "s|yarn start -p 9000|yarn start -p 9925|g" /app/run.sh
 
 ##################
 # 3 Install apps #
